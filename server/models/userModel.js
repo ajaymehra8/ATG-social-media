@@ -100,7 +100,7 @@ userSchema.methods.createPasswordResetToken = function () {
     .createHash("sha256")
     .update(resetToken)
     .digest("hex");
-  this.passwordResetExpires = Date.now() + 5 * 60 * 1000; // Setting expiration to 5 minutes from now
+  this.passwordResetExpires = Date.now() + 30 * 60 * 1000; // Setting expiration to 5 minutes from now
   return resetToken;
 };
 
