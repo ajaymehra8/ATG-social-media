@@ -56,7 +56,7 @@ const form=new FormData();
     if(image){
       form.append("image",image)
     }
-    const {data} = await axios.patch(`http://localhost:8000/api/v1/post/${post._id}`,form,config);
+    const {data} = await axios.patch(`https://atg-social-media-backend-blush.vercel.app/api/v1/post/${post._id}`,form,config);
     if (data.success) {
       toast({
         title: "Your post updated successfully",

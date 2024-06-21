@@ -31,7 +31,7 @@ const Login = () => {
 
   const submitUpdPass = async () => {
     const { data } = await axios.patch(
-      `http://localhost:8000/api/v1/user/reset-password/${verifyToken}`,
+      `https://atg-social-media-backend-blush.vercel.app/api/v1/user/reset-password/${verifyToken}`,
       { password, passwordConfirm: confirmPassword }
     );
     if (data.success) {
@@ -57,7 +57,7 @@ const Login = () => {
 
   const forgotPass = async () => {
     const { data } = await axios.patch(
-      "http://localhost:8000/api/v1/user/forgot-password",
+      "https://atg-social-media-backend-blush.vercel.app/api/v1/user/forgot-password",
       { email }
     );
     if (data.success) {

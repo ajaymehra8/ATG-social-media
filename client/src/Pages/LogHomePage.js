@@ -39,7 +39,7 @@ const LogHomePage = () => {
         Authorization: `Bearer ${token}`,
       },
     };
-    await axios.delete(`http://localhost:8000/api/v1/post/${post._id}`, config);
+    await axios.delete(`https://atg-social-media-backend-blush.vercel.app/api/v1/post/${post._id}`, config);
     toast({
       title: "Your post deleted successfully",
       status: "success",

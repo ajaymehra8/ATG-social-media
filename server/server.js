@@ -20,7 +20,7 @@ db();
 
 // CORS configuration
 const corsOptions = {
-    origin: 'http://localhost:3000', // Replace with your frontend domain
+    origin: 'https://atg-social-media-frontend.vercel.app', // Replace with your frontend domain
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials:true

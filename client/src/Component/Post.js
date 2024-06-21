@@ -48,7 +48,7 @@ const Post = ({ post, deleteMyPost }) => {
       });
     }
     const { data } = await axios.post(
-      `http://localhost:8000/api/v1/comment/${post._id}`,
+      `https://atg-social-media-backend-blush.vercel.app/api/v1/comment/${post._id}`,
       { text: comment },
       config
     );
@@ -82,7 +82,7 @@ const Post = ({ post, deleteMyPost }) => {
     );
     if (!alreadyLiked) {
       const { data } = await axios.post(
-        `http://localhost:8000/api/v1/like/${post._id}`,
+        `https://atg-social-media-backend-blush.vercel.app/api/v1/like/${post._id}`,
         {},
         config
       );
@@ -126,7 +126,7 @@ const Post = ({ post, deleteMyPost }) => {
       },
     };
     const { data } = await axios.get(
-      `http://localhost:8000/api/v1/like/${post._id}`,
+      `https://atg-social-media-backend-blush.vercel.app/api/v1/like/${post._id}`,
       config
     );
 
@@ -144,7 +144,7 @@ const Post = ({ post, deleteMyPost }) => {
       },
     };
     const { data } = await axios.get(
-      `http://localhost:8000/api/v1/comment/${post._id}`,
+      `https://atg-social-media-backend-blush.vercel.app/api/v1/comment/${post._id}`,
       config
     );
     setComments(data.comments);

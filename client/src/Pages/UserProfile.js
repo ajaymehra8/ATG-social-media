@@ -42,7 +42,7 @@ const handleRes=()=>{
       },
     };
     const { data } = await axios.patch(
-      `http://localhost:8000/api/v1/user/${user._id}`,
+      `https://atg-social-media-backend-blush.vercel.app/api/v1/user/${user._id}`,
       form,
       config
     );
@@ -73,7 +73,7 @@ const handleRes=()=>{
         Authorization: `Bearer ${token}`,
       },
     };
-    await axios.delete(`http://localhost:8000/api/v1/post/${post._id}`, config);
+    await axios.delete(`https://atg-social-media-backend-blush.vercel.app/api/v1/post/${post._id}`, config);
     toast({
       title: "Your post deleted successfully",
       status: "success",
@@ -91,7 +91,7 @@ const handleRes=()=>{
       },
     };
     const { data } = await axios.get(
-      `http://localhost:8000/api/v1/post/${user._id}`,
+      `https://atg-social-media-backend-blush.vercel.app/api/v1/post/${user._id}`,
       config
     );
     if (data.success) {

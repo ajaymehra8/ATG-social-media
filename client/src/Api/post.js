@@ -19,7 +19,7 @@ const config = {
       Authorization: `Bearer ${token}`,
     },
   };
-const {data}=await axios.post(`http://localhost:8000/api/v1/post/${user._id}`,form,config);
+const {data}=await axios.post(`https://atg-social-media-backend-blush.vercel.app/api/v1/post/${user._id}`,form,config);
 return data;
 }
 export const getAllPost=async(token)=>{
@@ -28,6 +28,6 @@ export const getAllPost=async(token)=>{
           Authorization: `Bearer ${token}`,
         },
       };
-      const {data}=await axios.get(`http://localhost:8000/api/v1/post`,config);
+      const {data}=await axios.get(`https://atg-social-media-backend-blush.vercel.app/api/v1/post`,config);
     return data;
 }

@@ -6,7 +6,7 @@ export const loginApi = async ( dataInfo ) => {
           message: "Please provide all required things.",
         };
       }
-      const {data}= await axios.post(`http://localhost:8000/api/v1/user/login`,{
+      const {data}= await axios.post(`https://atg-social-media-backend-blush.vercel.app/api/v1/user/login`,{
         email: dataInfo.email,
         password: dataInfo.password,
 
@@ -23,7 +23,7 @@ export const signupApi = async (dataInfo) => {
       message: "Please provide all required things.",
     };
   }
-  const { data } = await axios.post(`http://localhost:8000/api/v1/user/signup`,{
+  const { data } = await axios.post(`https://atg-social-media-backend-blush.vercel.app/api/v1/user/signup`,{
     name: dataInfo.name,
     email: dataInfo.email,
     password: dataInfo.password,
