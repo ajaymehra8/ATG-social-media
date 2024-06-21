@@ -132,14 +132,7 @@ const DoPost = () => {
               )}
 
               <FormControl id="photo-upload">
-                <FormLabel htmlFor="photo">
-                  <IconButton
-                    colorScheme="teal"
-                    aria-label="Upload photo"
-                    marginTop={"20px"}
-                    icon={<i class="bi bi-card-image"></i>}
-                  />
-                </FormLabel>
+                
                 <Input
                   id="photo"
                   name="photo"
@@ -147,6 +140,7 @@ const DoPost = () => {
                   accept="image/*"
                   top={"20px"}
                   pl={"20px"}
+                  
                   onChange={handleImageChange}
                 />
               </FormControl>
