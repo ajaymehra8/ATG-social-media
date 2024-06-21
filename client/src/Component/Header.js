@@ -10,7 +10,7 @@ import {
   MenuDivider,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,NavLink } from "react-router-dom";
 import { useChange } from "../context/StateProvider";
 
 const Header = () => {
@@ -40,14 +40,15 @@ const Header = () => {
           zIndex: "1",
         }}
       >
-        <Text
+        <NavLink
           fontSize={"2xl"}
           fontFamily={"Work sans"}
           pl={4}
           style={{ fontWeight: "500", letterSpacing: "1px" }}
+          to={"/"}
         >
           NexusHub
-        </Text>
+        </NavLink>
 
         <div>
           <Menu>

@@ -24,12 +24,14 @@ const UserProfile = () => {
   const [newPassword, setNewPassword] = useState();
   const [pic, setPic] = useState();
   const [click, setClick] = useState("profile");
+  const [loading, setLoading] = useState(false);
   const toast = useToast();
-  const [showBar,setShowBar]=useState(false);
-const handleRes=()=>{
-  setShowBar(!showBar);
-}
+  const [showBar, setShowBar] = useState(false);
+  const handleRes = () => {
+    setShowBar(!showBar);
+  };
   const updateMe = async () => {
+    setLoading(true);
     const form = new FormData();
     form.append("name", name);
 
@@ -65,6 +67,7 @@ const handleRes=()=>{
         position: "top",
       });
     }
+    setLoading(false);
   };
 
   const deleteMyPost = async (post) => {
@@ -73,7 +76,10 @@ const handleRes=()=>{
         Authorization: `Bearer ${token}`,
       },
     };
-    await axios.delete(`https://atg-social-media-backend-blush.vercel.app/api/v1/post/${post._id}`, config);
+    await axios.delete(
+      `https://atg-social-media-backend-blush.vercel.app/api/v1/post/${post._id}`,
+      config
+    );
     toast({
       title: "Your post deleted successfully",
       status: "success",
@@ -117,11 +123,14 @@ const handleRes=()=>{
         width: "100vw",
       }}
     >
-       
       <Header />
-      <Button onClick={handleRes} className="resBtn" display={{base:"flex",md:"none"}}>
-        <i className="bi bi-list"></i>    
-            </Button>
+      <Button
+        onClick={handleRes}
+        className="resBtn"
+        display={{ base: "flex", md: "none" }}
+      >
+        <i className="bi bi-list"></i>
+      </Button>
       <div
         style={{
           display: "flex",
@@ -132,7 +141,6 @@ const handleRes=()=>{
           gap: "20px",
         }}
       >
-       
         <Box
           display={{ base: showBar ? "flex" : "none", md: "flex" }}
           flexDirection={"column"}
@@ -223,7 +231,7 @@ const handleRes=()=>{
                 padding={"3px"}
                 onClick={updateMe}
               >
-                Update Me
+                {loading ? "Updating...." : "Update Me"}
               </Button>
             </VStack>
           </Box>
