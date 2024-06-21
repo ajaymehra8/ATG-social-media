@@ -43,6 +43,8 @@ const Login = () => {
         isClosable: true,
         position: "top",
       });
+      setForgotPassword(false);
+
     } else {
       toast({
         title: data.message,
@@ -52,7 +54,6 @@ const Login = () => {
         position: "top",
       });
     }
-    setForgotPassword(false);
     setVerifyToken("");
   };
 
