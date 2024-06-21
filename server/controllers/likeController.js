@@ -8,7 +8,7 @@ exports.giveLike = catchAsync(async (req, res) => {
   like=await Like.findById(like._id).populate("user");
   res.status(200).json({
     success: true,
-    message: "You give a like",
+    message: `You gived a like to ${like?.user?.name} post`,
     like
   });
 });
