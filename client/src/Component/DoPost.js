@@ -145,9 +145,8 @@ const DoPost = () => {
                   name="photo"
                   type="file"
                   accept="image/*"
-                  position={"absolute"}
                   top={"20px"}
-                  visibility={"hidden"}
+                  pl={"20px"}
                   onChange={handleImageChange}
                 />
               </FormControl>
