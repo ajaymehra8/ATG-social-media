@@ -34,6 +34,7 @@ const Login = () => {
       `https://atg-social-media-backend-blush.vercel.app/api/v1/user/reset-password/${verifyToken}`,
       { password, passwordConfirm: confirmPassword }
     );
+    console.log(data);
     if (data.success) {
       toast({
         title: data.message,
