@@ -43,7 +43,6 @@ const Login = () => {
         position: "top",
       });
     } else {
-      .log(data);
       toast({
         title: data.message,
         status: "warning",
