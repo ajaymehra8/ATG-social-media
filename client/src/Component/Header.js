@@ -41,10 +41,8 @@ const Header = () => {
         }}
       >
         <NavLink
-fontSize={"25px"}
-fontFamily={"Work sans"}
-          pl={"50px"}
-          style={{ fontWeight: "500", letterSpacing: "1px" }}
+
+          style={{ fontWeight: "500", letterSpacing: "1px",fontSize:"25px",paddingLeft:"30px" }}
           to={"/"}
         >
           NexusHub
