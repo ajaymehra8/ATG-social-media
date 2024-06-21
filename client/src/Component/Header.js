@@ -41,9 +41,9 @@ const Header = () => {
         }}
       >
         <NavLink
-          fontSize={"2xl"}
-          fontFamily={"Work sans"}
-          pl={4}
+fontSize={"25px"}
+fontFamily={"Work sans"}
+          pl={"50px"}
           style={{ fontWeight: "500", letterSpacing: "1px" }}
           to={"/"}
         >
